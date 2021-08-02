@@ -32,51 +32,47 @@
       .social-icon img {
         width: 20px;
       }
-      .menu {
-        margin-bottom: 5px;
-        width: 100%;
-        background-color: black;
+      .nav {
+        list-style: none;
+        background: black;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: flex;
+        align-items: center;
       }
-      ul {
-        overflow: hidden;
+      .nav ul {
         list-style-type: none;
+        margin: auto;
       }
-      a {
-        text-decoration: none;
-        display: block;
+      .nav li {
+        float: right;
         color: white;
       }
-      li {
-        float: left;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 5px;
-        padding-right: 5px;
-        text-align: center;
+      .nav a {
+        text-decoration: none;
+        display: block;
+        padding: 15px;
+        color: white;
       }
-      li:hover {
-        background-color: antiquewhite;
-        font-weight: bold;
-      }
-      a:hover {
+      .nav li:hover {
+        background: antiquewhite;
         color: black;
         font-weight: bold;
       }
-      .text {
-        float: right;
-        margin: 10px;
-        border-radius: 5px;
-        height: 30px;
-        text-align: center;
+      .nav a:hover {
+        color:black;
+        font-weight: bold;
       }
-      .submit {
-        float: right;
-        margin: 10px;
-        border-radius: 5px;
-        height: 30px;
+      .spacer {
+        flex-grow: 1;
       }
-      .submit:hover {
-        background: lightcoral;
+      .formright {
+        padding: 10px;
+      }
+      @media (max-width: 800px) {
+        nav .formright {
+          display: none;
+        }
       }
       .content {
         background-color: gray;
@@ -86,14 +82,32 @@
         border: 5px solid lightgray;
         text-align: center;
         width: 500px;
-        margin-top: 20px;
+        margin: auto;
       }
-      .content {
-        background-color: white;
-        width: 30px;
+      .white {
+        background-color: rgb(255,255,255)
+      }
+      .white {
+        background-color: rgb(255,255,255)
+      }
+      .gold {
+        background-color: rgb(255,215,0)
+      }
+      .silver {
+        background-color: rgb(192,192,192)
+      }
+      .brown {
+        background-color: rgb(165,42,42)
+      }
+      .lightgreen {
+        background-color: rgb(144, 238, 144)
       }
       .slider {
         background-color: white;
+      }
+     .slider img{
+       background-color: white;
+         width: 70px;
       }
       .footer {
         text-align: center;
@@ -112,33 +126,47 @@
 
     <!--Header-->
     <div class="header">
-      <div class="header_logo"><img src="images/logo (1).png"></div>
+      <div class="header_logo"><img src="images/logo.png"></div>
       <div class="header_greeting">
         BERITA HARIAN
       </div>
       <div class="social-icon">
         <img src="images/youtube.png">
-        <img src="images/instagram.jpg">
+        <img src="images/instagram.png">
         <img src="images/twitter.png">
         <img src="images/facebook.png">
       </div>
     </div>
-     <!--Menu-->
-    <div class="menu">
-      <ul>
-        <li><a href="#">BERITA</a></li>
-        <li><a href="#">SUKAN</a></li>
-        <li><a href="#">DUNIA</a></li>
-        <li><a href="#">HIBURAN</a></li>
-      </ul>
-      <input type="text" class="text" placeholder="Masuk Kata Kunci">
-      <input type="submit" value="Cari" class="hantar">
-    </div>
 
-    <!--Content-->
+    <!--Menu-->
+    <div class="nav">
+      <li><a href="#">BERITA</a></li>
+      <li><a href="#">SUKAN</a></li>
+      <li><a href="#">DUNIA</a></li>
+      <li><a href="#">HIBURAN</a></li>
+
+      <div class="spacer"></div>
+
+      <form class="formright">
+        <input type="text" placeholder="Masuk kata kunci">
+        <button type="submit">Cari</button>
+      </form>
+    </div>
+<!--Content-->
     <div class="content">
       <marquee direction="up">
+        <center>
         <table border="2">
+          <colgroup>
+            <col class="white" />
+            <col class="white" />
+            <col class="gold" />
+            <col class="silver" />
+            <col class="brown" />
+            <col class="lightgreen" />
+          </colgroup>
+          <thead>
+            
             <tr>
                <th>Bil</th>
                <th>Negara</th>
@@ -168,7 +196,7 @@
                <td>America</td>
                <td>20</td>
                <td>56</td>
-<td>2</td>
+               <td>2</td>
                <td>78</td>
             </tr>
             <tr>
@@ -180,15 +208,16 @@
                <td>61</td>
             </tr>
         </table>
+          </center>
       </marquee>
-      
+      <br>
       <!--Slider-->
       <div class="slider">
       <marquee direction="left">
-        <img src=images/football.png>
-        <img src=images/rugby.png>
-        <img src=images/netball.png>
-        <img src=images/swimming.png>
+        <img src="images/football.png"><font>Bola Sepak</font>
+        <img src="images/rugby.png"<font>Ragbi</font>
+        <img src="images/netball.png"<font>Bola Jaring</font>
+        <img src="images/swimming.png"<font>Berenang</font>
       </marquee>
      
     <!--Footer-->
