@@ -18,6 +18,36 @@
         border-radius:50%;
         float:right;
       }
+        .menu {
+        margin-bottom: 5px;
+        width: 100%;
+        background-color: black;
+      }
+      ul {
+        overflow: hidden;
+        list-style-type: none;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        color: white;
+      }
+      li {
+        float: left;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+      }
+      li:hover {
+        background-color: antiquewhite;
+        font-weight: bold;
+      }
+      a:hover {
+        color: black;
+        font-weight: bold;
+      }
     </style>
   </head>
   
@@ -38,7 +68,16 @@
     </div>
     
     <!---MENU--->
-    
+    <div class="menu">
+      <ul>
+        <li><a href="#">BERITA</a></li>
+        <li><a href="#">SUKAN</a></li>
+        <li><a href="#">DUNIA</a></li>
+        <li><a href="#">HIBURAN</a></li>
+      </ul>
+      <input type="text" class="text" placeholder="Masuk Kata Kunci">
+      <input type="submit" value="Cari" class="hantar">
+    </div>
     
     <!---CONTENT--->
     
